@@ -73,23 +73,35 @@
     <img src="GitInit.png" alt="GitInit"><br>
     <p>Despues de esto agregamos los archivos al repositorio con el comando <b>git add "NombreArchivo"</b>, como yo quiero agregar todos los archivos que tengo en la carpeta utilizo el comando <b>git add *</b>.</p>
     <img src="GitAdd.png" alt="GitAdd"><br>
-    <p>Ya para terminar la creacion del repositorio utilizamos el commando <b>git commit</b>, con el cual almacenamos los cambios hechos al repositorio, podemos agregar el comando <b>-m "comentario"</b>, para agregar un comentario de los cambios realizados.</p>
+    <p>Ya para terminar la creacion del repositorio utilizamos el commando <b>git commit -m "ComentarioModificacion"</b>, con el cual almacenamos los cambios hechos al repositorio.</p>
     <img src="Commit1.png" alt="Commit1"><br><br><br>
-    <h2>Creación de branches</h2>
+    <h2>Creación de branches</h2><br>
     <p>Un branch es una rama de desarrollo que me permite modificar el contenido del repositorio sin afectar otra ramas del repositorio, en este ejemplo la voy a utilizar para modificar la entrada que antes se llamaba software para crear este tutorial.<br>
     <p>Los branch se crean con el comando <b>git checkout -b "NombreBranch"</b>, este comando <b>checkout "NombreBranch"</b> tambien funciona para cambiar entre los diferentes branch del proyecto. Con el comando <b>git branch</b> 
         puedo ver los diferentes branch creados en el proyecto</p>
-    <img src="CrearBranch.png" alt="Commit1"><br>
-    <p>Despues de tener los cambios hechos volvemos a utilizar los comandos <b>git add "NombreArchivo"</b> y <b>git commit</b>, para subir los archivos modificados y guardar los cambios respectivamente.</p>
-    <img src="AddBranch.png" alt="Commit1"><br>
-    <img src="CommitBranch.png" alt="Commit1"><br>
+    <img src="CrearBranch.png" alt="CrearBranch"><br>
+    <p>Despues de tener los cambios hechos volvemos a utilizar los comandos <b>git add "NombreArchivo"</b> y <b>git commit -m "Comentario"</b>, para subir los archivos modificados y guardar los cambios respectivamente.</p>
+    <img src="AddBranch.png" alt="AddBranch"><br>
+    <img src="CommitBranch.png" alt="CommitBranch"><br>
     <p>Ya para terminar utilizamos el comando <b>git merge "NombreBranch"</b> para unificar ese branch con la rama de desarrollo principal, pero antes de usar este comado debemos seleccionar el branch principal con el comando <b>git checkout master</b>.</p>
-    <img src="Merge.png" alt="Commit1"><br><br><br>
+    <img src="Merge.png" alt="Merge"><br>
+    <p>Con esato ya tendriamos en el branch principal todas las modificaciones hechas en el branch "Github"</p><br><br><br>
 
-    </p>
-
-    <h2>Subtítulo 3</h2>
-    <p>Este es el contenido del tercer párrafo sobre software. Explica cómo se implementa o cómo funciona este software.</p>
+    <h2>Agrengando un repositorio remoto</h2>
+    <p>Este paso es para poder vincular nuestro repositorio local con los repositorios de github.
+    <p>El primer paso es crear nuestra llave publica SSH, esto se hace con el codigo <b>ssh-keygen -t ed25519 -C "email@email.com"</b>donde el email debe ser el email vinculado a Github.</p>
+    <img src="SSH.png" alt="SSH"><br>
+    <p>Ahora iniciamos el agente SSH y agregamos nuestra clave SSH generada, esto se hace con los codigos <b>$ eval "$(ssh-agent -s)"</b> y <b>$ ssh-add ~/.ssh/id_ed25519</b></p>
+    <img src="AgenteSSH.png" alt="AgenteSSH"><br>
+    <p>Despues de esto vinculamos github con nuestra clave SSH, visualizamos la clave con el comando <b>$ cat ~/.ssh/id_ed25519.pub</b>, copiamos la clave generada, vamos a github abrimos la configuracion, y pegamos la clave SSH.</p>
+     <img src="Github1.png"><br>
+     <img src="Github2.png"><br>
+     <img src="Github3.png"><br>
+     <img src="Github4.png"><br>
+     <p>Creamos nuestro repositorio en Github, copiamos el texto que dice <b>..or push an existing repository from the command line</b>, lo pegamos en la consola y ejecutamos ese codigo, con esto ya tenemos nuestro repositorio local vinculado con el repositorio de github.</p>
+     <img src="CrearRepositorio.png"><br>
+     <img src="CodigoCopiar.png"><br>
+     <img src="VinculandoRepositorios.png"><br>
 
 </div>
 
