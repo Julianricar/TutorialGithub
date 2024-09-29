@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: darkgrey;
+        }
+        header {
+            background-color: #6b6ddf;
+            padding: 10px;
+            text-align: center;
+        }
+        .menu nav {
+            margin: 0 15px;
+            font-size: 30px;
+            text-decoration: none;
+            color: #333;
+            background-color: antiquewhite;
+            padding: 5px;
+            font-weight: bold;
+            text-align: right;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+        .content img {
+            
+            object-fit: cover;
+        }
+        .content h1 {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .content h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .content p {
+            text-align: left;
+            max-width: 600px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>
+        BIENVENIDOS A MI BLOG
+    </h1>
+</header>
+
+<div class="menu">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="TutorialGithub.html">Tutorial Github</a>
+    </nav>
+</div>
+
+<div class="content">
+    
+    <h1>TUTORIAL DE GITHUB</h1>
+
+    
+    <h2>Iniciacion del repositorio localmente</h2> <br>
+    <p>El primer paso para la inicializacion del repositorio localmente es verificar que en la consola nos encontramos en la carpeta en la cual deseamos crear el repositorio, para crear el repositorio local utilizamos el comando <b>git init</b>. </p>
+    <img src="GitInit.png" alt="GitInit"><br>
+    <p>Despues de esto agregamos los archivos al repositorio con el comando <b>git add "NombreArchivo"</b>, como yo quiero agregar todos los archivos que tengo en la carpeta utilizo el comando <b>git add *</b>.</p>
+    <img src="GitAdd.png" alt="GitAdd"><br>
+    <p>Ya para terminar la creacion del repositorio utilizamos el commando <b>git commit</b>, con el cual almacenamos los cambios hechos al repositorio, podemos agregar el comando <b>-m "comentario"</b>, para agregar un comentario de los cambios realizados.</p>
+    <img src="Commit1.png" alt="Commit1"><br><br><br>
+    <h2>Creación de branches</h2>
+    <p>Un branch es una rama de desarrollo que me permite modificar el contenido del repositorio sin afectar otra ramas del repositorio, en este ejemplo la voy a utilizar para modificar la entrada que antes se llamaba software para crear este tutorial.<br>
+    <p>Los branch se crean con el comando <b>git checkout -b "NombreBranch"</b>, este comando <b>checkout "NombreBranch"</b> tambien funciona para cambiar entre los diferentes branch del proyecto. Con el comando <b>git branch</b> 
+        puedo ver los diferentes branch creados en el proyecto</p>
+    <img src="CrearBranch.png" alt="Commit1"><br>
+
+    </p>
+
+    <h2>Subtítulo 3</h2>
+    <p>Este es el contenido del tercer párrafo sobre software. Explica cómo se implementa o cómo funciona este software.</p>
+
+</div>
+
+</body>
+</html>
